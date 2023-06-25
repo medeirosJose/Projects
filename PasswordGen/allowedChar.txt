@@ -1,4 +1,4 @@
-These are the ASCII Valid Characters according to IBM.
+These are the valid ASCII Characters according to IBM.
 
 Lowercase characters {a-z}
 Uppercase characters {A-Z}
