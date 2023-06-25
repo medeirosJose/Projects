@@ -7,7 +7,7 @@ password_length = 14
 #chr returns the value in unicode / ascii
 #ord returns the value of the character in unicode / ascii
 def generatePassword(password_length = password_length):
-    print('entering generator')
+    #print('entering generator')
     generatedPassword = []
 
     for char in range(password_length):
@@ -43,6 +43,11 @@ print('\nLower Case',lower_case)
 print('\nUpper Case',upper_case)
 print()'''
 
+def storePassword(password): #this function stores the password in a txt file
+    with open('passwords.txt', 'a') as file:
+        file.write(password)
+        file.write("\n\n") #it adds a blank line between each password
+
 def isValidPassword(password):
     hasNumber = False
     hasSpecial = False
@@ -57,32 +62,32 @@ def isValidPassword(password):
         if char in numbers:
             if numberCount < 1:
                 hasNumber = True
-                print(char)
+                #print(char)
                 numberCount += 1
 
         if char in special_characters:
             if specialCount < 1:
-                print(char)
+                #print(char)
                 hasSpecial = True
                 specialCount += 1
 
         if char in lower_case:
             if lowerCount < 1:
-                print(char)
+                #print(char)
                 hasLower = True
                 lowerCount += 1
 
         if char in upper_case:
             if upperCount < 1:
-                print(char)
+                #print(char)
                 hasUpper = True
                 upperCount += 1
 
     if hasNumber and hasSpecial and hasLower and hasUpper:
-        print('Password is valid')
+        #print('Password is valid')
         return password
     else:
-        print('\n\n\nPassword is not valid')
+        #print('\n\n\nPassword is not valid')
         new_password = generatePassword() #calling the function again to generate a new password
         return isValidPassword(new_password) #using recursion to check if the new password is valid
 
@@ -90,3 +95,4 @@ notCheckedPassword = generatePassword()
 password = isValidPassword(notCheckedPassword)
 
 print(password)
+storePassword(password)
