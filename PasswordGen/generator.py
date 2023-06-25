@@ -44,6 +44,7 @@ print('\nUpper Case',upper_case)
 print()'''
 
 def storePassword(password): #this function stores the password in a txt file
+    print('Storing password...')
     with open('passwords.txt', 'a') as file:
         file.write(password)
         file.write("\n\n") #it adds a blank line between each password
@@ -94,5 +95,5 @@ def isValidPassword(password):
 notCheckedPassword = generatePassword()
 password = isValidPassword(notCheckedPassword)
 
-print(password)
+print('Your pseudo-random password is: ', password)
 storePassword(password)
