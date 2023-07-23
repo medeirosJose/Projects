@@ -15,5 +15,5 @@ if __name__ == "__main__":
     notCheckedPassword = generatePassword(password_length)
     password = isValidPassword(notCheckedPassword)
 
-    print(f'\nYour pseudo-random password is: {password}\n')
+    print(f'\nYour pseudo-random password is -> {password}\'')
     storePassword(password)
