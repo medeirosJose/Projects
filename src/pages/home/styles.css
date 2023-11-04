@@ -1,0 +1,22 @@
+.no-spinners::-webkit-inner-spin-button,
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-clear-button {
+  display: none;
+}
+
+.no-spinners::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.hoverImg {
+  cursor: pointer;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  transition: all ease-in-out 0.5s;
+}
+
+.hoverImg:hover {
+  width: 300px;
+  height: 100%;
+}
